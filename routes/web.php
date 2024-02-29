@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\HomePage;
 use App\Http\Controllers\ProductsPage;
+use App\Http\Controllers\SalesPage;
+use App\Http\Controllers\UserPage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +27,5 @@ Route::get('/food_beverage', [ProductsPage::class, 'food_beverage']);
 Route::get('/home_care', [ProductsPage::class, 'home_care']);
 Route::get('/beauty_health', [ProductsPage::class, 'beauty_health']);
 Route::get('/baby_kid', [ProductsPage::class, 'baby_kid']);
+Route::get('/sales',[SalesPage::class, 'sales']);
+Route::get('/user', [UserPage::class, 'user']);

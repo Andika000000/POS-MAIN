@@ -9,6 +9,6 @@ class UserPage extends Controller
     public function user() {
         return view('user')
         ->with('id', '1')
-        ->with('name', 'neddy');
+        ->with('name', 'Andika');
     }
 }

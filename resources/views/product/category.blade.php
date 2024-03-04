@@ -8,7 +8,7 @@
        
     </head>
     <body>
-        <h1>Halaman Transaksi POS</h1>
+        <h1>Halaman kategori {{ $category }}</h1>
         
     </body>
 </html>

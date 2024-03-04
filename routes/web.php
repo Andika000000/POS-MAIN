@@ -22,10 +22,16 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [HomePage::class, 'home']);
-Route::get('/products', [ProductsPage::class, 'products']);
-Route::get('/food_beverage', [ProductsPage::class, 'food_beverage']);
-Route::get('/home_care', [ProductsPage::class, 'home_care']);
-Route::get('/beauty_health', [ProductsPage::class, 'beauty_health']);
-Route::get('/baby_kid', [ProductsPage::class, 'baby_kid']);
-Route::get('/sales',[SalesPage::class, 'sales']);
-Route::get('/user', [UserPage::class, 'user']);
+
+Route::get('/product', [ProductsPage::class, 'index']);
+Route::prefix('/category')->group(function () {
+    Route::get('food-beverage', [ProductsPage::class, 'foodbeverage']);
+    Route::get('home-care', [ProductsPage::class, 'homecare']);
+    Route::get('beauty-health', [ProductsPage::class, 'beautyhealth']);
+    Route::get('baby-kid', [ProductsPage::class, 'babykid']);
+});
+
+Route::get('/user', [userpage::class,'user']);
+
+
+Route::get('/sales', [salesPage::class,'sales']);

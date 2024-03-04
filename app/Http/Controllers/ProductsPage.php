@@ -6,23 +6,23 @@ use Illuminate\Http\Request;
 
 class ProductsPage extends Controller
 {
-    public function products() {
-        return view('product');
+    public function index() {
+        return view('product.product');
     }
 
-    public function food_beverage() {
-        return view('category.food-beverage');
+    public function foodbeverage() {
+        return view('product.category',['category'=>'Food Beverage']);
     }
 
-    public function home_care() {
-        return view('category.home-care');
+    public function homecare() {
+        return view('product.category',['category'=>'Home Care']);
     }
 
-    public function beauty_health() {
-        return view('category.beauty-health');
+    public function beautyhealth() {
+        return view('product.category',['category'=>'Beauty Health']);
     }
 
-    public function baby_kid() {
-        return view('category.baby-kid');
+    public function babykid() {
+        return view('product.category',['category'=>'Baby Kid']);
     }
 }
